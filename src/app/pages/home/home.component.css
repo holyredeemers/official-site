@@ -1,0 +1,245 @@
+/* Hero Section */
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .carousel-caption h5 {
+    color: #FFB22C; /* School's accent color */
+    font-size: 2rem;
+  }
+  
+  .carousel-caption p {
+    color: #F7F7F7;
+    font-size: 1.2rem;
+  }  
+/* Hero End */
+
+/* Welcome Section */
+#welcome-section {
+    padding: 50px 0;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #854836;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .welcome-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Find Out More Button */
+.find-out-more-btn {
+    display: inline-block;
+    background-color: #FFB22C; /* Gold color from color palette */
+    color: #000000; /* Black text */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .find-out-more-btn:hover {
+    background-color: #854836; /* Brown from color palette */
+    color: #F7F7F7; /* Light text on hover */
+  }
+  /* find-out-more-btn end */
+/* Welcome End   */
+  
+/* Highlights Section */
+#highlights-section {
+    width: 100%;
+    background-color: #F7F7F7; /* Light gray background */
+    padding: 50px 0;
+  }
+  
+  /* Center content */
+  #highlights-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adds spacing on smaller screens */
+  }
+  
+  /* Highlights Container */
+  .highlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Individual Highlight Items */
+  .highlight-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .highlight-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image above highlights */
+  .highlight-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Date Section */
+  .highlight-date {
+    background: #FFB22C; /* Gold */
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 80px;
+  }
+  
+  .highlight-date span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  
+  /* Content Section */
+  .highlight-content {
+    flex: 1;
+  }
+  
+  .highlight-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #854836; /* Brown */
+    margin-bottom: 5px;
+  }
+  
+  .highlight-text {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  /* More Events */
+  .more-events-link {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .more-events-link a {
+    text-decoration: none;
+    color: #FFB22C; /* Orange */
+    transition: color 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .more-events-link .arrow {
+    margin-left: 8px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .more-events-link a:hover {
+    color: #D9941A; /* Darker orange */
+  }
+  
+  .more-events-link a:hover .arrow {
+    transform: translateX(5px);
+  }  
+/* Highlight End */
+
+/* Gallery Section */
+.gallery-section {
+    padding: 40px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Explore Button */
+  .explore-underline-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .explore-underline-button {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFB22C;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .explore-underline-button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFB22C;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .explore-underline-button:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+/* Gallery End */
+  

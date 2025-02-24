@@ -1,0 +1,83 @@
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #854836;
+    margin-bottom: 30px;
+  }
+  
+  .hero-image {
+    width: 85%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-section h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 1.3rem;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+  }
+/* Hero End */
+
+/* Moto Section */
+.motto-section {
+    background: url('/public/images/about/moto/motto-image.jpg') center/cover no-repeat; 
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }  
+  
+  .motto-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffb22c; /* Gold color */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .motto-section h5 {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .motto-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #f1f1f1;
+    padding: 0 15px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  }  
+/* Moto End */
+
