@@ -43,7 +43,6 @@
 
 /* Moto Section */
 .motto-section {
-    background: url('/public/images/about/moto/motto-image.jpg') center/cover no-repeat; 
     text-align: center;
     padding: 100px 20px;
     color: #fff;
@@ -53,6 +52,14 @@
     align-items: center;
     min-height: 400px;
   }  
+
+  .background-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
   
   .motto-section h2 {
     font-size: 3rem;
@@ -81,3 +88,105 @@
   }  
 /* Moto End */
 
+/* Flag Section */
+/* Overall Section Styling */
+.flag-section {
+  padding: 80px 20px; /* Increased padding for more height */
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container to Arrange Flag & Content Side by Side */
+.flag-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px; /* Increased width */
+  width: 100%;
+  gap: 60px; /* More spacing */
+}
+
+/* Left Side: Flag Image */
+.flag-image {
+  flex: 1;
+  text-align: center;
+}
+
+.flag-image img {
+  width: 100%;
+  max-width: 500px; /* Increased max-width */
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Right Side: Flag Content */
+.flag-content {
+  flex: 1;
+  text-align: left;
+}
+
+.flag-content h2 {
+  font-size: 38px; /* Bigger title */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.emblem-img {
+  width: 120px; /* Slightly larger emblem */
+  margin: 15px 0;
+}
+
+.flag-content p {
+  font-size: 20px; /* Bigger text */
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flag-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flag-content {
+    text-align: center;
+  }
+
+  .flag-image img {
+    max-width: 100%; /* Ensure full width on small screens */
+  }
+}
+/* Flag End */
+
+/* Declaration Section */
+/* Declaration Section Styling */
+.declaration-section {
+  padding: 80px 20px;
+  background-color: #F7F7F7;
+  text-align: center;
+}
+
+/* Container to Center Content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Paragraph Styling */
+.declaration-content p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+/* Declaration End */
