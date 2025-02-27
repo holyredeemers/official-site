@@ -1,42 +1,48 @@
-<!-- Hero section -->
-<section class="hero-section">
-    <div class="hero-content">
-      <h1>Get in Touch</h1>
-      <p>We’re here to help and answer any questions you might have.</p>
-    </div>
-  </section>
-  <!-- Hero End -->
+<section class="contact-hero">
+  <!-- Background Animation -->
+  <div class="hero-overlay"></div>
 
-  <!-- Contact Info Section -->
-  <section class="contact-info">
-    <div class="info-box">
-      <h3>Our Address</h3>
-      <p>123 School Road, City, State, ZIP</p>
-    </div>
-    <div class="info-box">
-      <h3>Phone</h3>
-      <p>+1 234 567 890</p>
-    </div>
-    <div class="info-box">
-      <h3>Email</h3>
-      <p>info!holyredeemer.edu</p>
-    </div>
-    <div class="info-box">
-      <h3>Office Hours</h3>
-      <p>Monday - Friday: 8 AM - 5 PM</p>
-    </div>
-  </section>  
-  <!-- Contact Info End -->
-
-  <!-- Map Section -->
-  <section class="google-map">
-    <iframe 
+  <!-- Hero Title with Animation -->
+  <h1 class="hero-title">GET IN TOUCH</h1>
+  <canvas id="particleCanvas"></canvas>
+  <!-- Contact Details & Map Section -->
+  <div class="contact-container">
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.9630576153164!3d-37.816279779751365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d48238a3f2b%3A0x1f77e10fa4a3ed8!2sHoly%20Redeemer%20High%20School!5e0!3m2!1sen!2sus!4v1615586000000"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </section>  
-  <!-- Map End -->
+        frameborder="0"
+        allowfullscreen
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </div>
+
+    <!-- Animated Transparent Divider -->
+    <div class="divider"></div>
+
+    <!-- Contact Info Cards -->
+    <div class="contact-info">
+      <div class="contact-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Address</h3>
+        <p>123 Holy Redeemer St, City, Country</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-phone"></i>
+        <h3>Phone</h3>
+        <p>+123 456 7890</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>contact!holyredeemer.edu</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-clock"></i>
+        <h3>Office Hours</h3>
+        <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+      </div>
+    </div>
+  </div>
+</section>

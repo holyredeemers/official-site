@@ -1,65 +1,131 @@
-/* Hero section */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 60vh;
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
-    animation: fadeInScale 1.5s ease-in-out;
+/* Ensure Hero Section is Full-Screen */
+.contact-hero {
+  position: relative;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: #F7F7F7;
+  color: #222;
+}
+
+/* Subtle Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+
+/* Animated Title */
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  animation: fadeSlideUp 1.2s ease-out;
+}
+
+/* Keyframes for "Get in Touch" Text */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .hero-content p {
-    font-size: 1.5rem;
+}
+
+/* Container for Map & Contact Info */
+.contact-container {
+  display: flex;
+  width: 85%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 30px;
+  gap: 50px; /* ⬅ Increase Space */
+}
+
+/* Google Map */
+.map-container {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+}
+
+/* 🔥 Animated Divider - Grows from Top */
+.divider {
+  width: 3px;
+  height: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  animation: dividerGrow 1.5s ease-out forwards;
+}
+
+/* Keyframes for Divider Animation */
+@keyframes dividerGrow {
+  0% {
+    height: 0;
   }
-  
-  @keyframes fadeInScale {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+  100% {
+    height: 250px;
   }
-/* Hero End   */
+}
+
 /* Contact Info Section */
 .contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    text-align: center;
-    padding: 50px 10%;
-    background: #f7f7f7;
-  }
-  
-  .info-box {
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .info-box h3 {
-    color: #0056b3;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-/* Contact Info End   */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-/* Map Section */
-.google-map {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    margin-top: 30px;
-  }
-/* Map End   */
+/* 🔥 Contact Cards with Hover Effect */
+.contact-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🔥 Contact Card Hover Effect */
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons */
+.contact-card i {
+  font-size: 1.8rem;
+  color: #ffb22c;
+}
+
+/* Particle Background */
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}

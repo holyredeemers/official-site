@@ -1,1 +1,27 @@
-<p>events works!</p>
+<section id="events-section">
+    <div class="container">
+      <h2 class="section-title text-center">Upcoming & Past Events</h2>
+  
+      <div class="events-container">
+        <!-- Event Card -->
+        <div class="event-item" *ngFor="let event of events">
+          <!-- Event Image Carousel -->
+          <div class="event-carousel">
+            <ngx-slick-carousel class="carousel" [config]="slideConfig">
+              <div ngxSlickItem *ngFor="let img of event.images" class="carousel-item">
+                <img [src]="img" alt="Event Image" class="event-img">
+              </div>
+            </ngx-slick-carousel>
+          </div>
+  
+          <!-- Event Details -->
+          <div class="event-content">
+            <div class="event-date">{{ formatDate(event.date) }}</div>
+            <h3 class="event-title">{{ event.title }}</h3>
+            <p class="event-description">{{ event.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
