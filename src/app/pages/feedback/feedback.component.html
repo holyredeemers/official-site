@@ -1,1 +1,47 @@
-<p>feedback works!</p>
+<!-- Carousel Section -->
+<section id="feedback-carousel">
+    <div class="container">
+      <h2 class="section-title">What Our Alumni Say</h2>
+      
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="feedback-card" *ngFor="let feedback of feedbacks">
+            <p class="feedback-text">"{{ feedback.comment }}"</p>
+            <h4 class="feedback-author">{{ feedback.name }}</h4>
+            <p class="feedback-meta">{{ feedback.occupation }} | Class of {{ feedback.year }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carousel Controls -->
+      <button class="prev-btn" (click)="prevSlide()">‹</button>
+      <button class="next-btn" (click)="nextSlide()">›</button>
+    </div>
+  </section>
+<!-- Carousel End   -->
+
+<!-- Form Section -->
+<section id="feedback-form">
+    <div class="container">
+      <div class="form-card">
+        <h2 class="form-title">Share Your Experience</h2>
+        
+        <form (submit)="submitFeedback()">
+          <label for="name">Name</label>
+          <input type="text" id="name" [(ngModel)]="newFeedback.name" required>
+          
+          <label for="year">Passed Out Year</label>
+          <input type="number" id="year" [(ngModel)]="newFeedback.year" required>
+          
+          <label for="occupation">Occupation</label>
+          <input type="text" id="occupation" [(ngModel)]="newFeedback.occupation" required>
+          
+          <label for="comment">Comments</label>
+          <textarea id="comment" [(ngModel)]="newFeedback.comment" required></textarea>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>  
+<!-- Form End -->
