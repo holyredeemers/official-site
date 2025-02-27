@@ -1,0 +1,200 @@
+/* Hero Section */
+/* Academics Hero Section Styling */
+.academics-hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Adjust height as needed */
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  /* Background Image Styling */
+  .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  /* Overlay Styling */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 2;
+  }
+  
+  /* Hero Content Styling */
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }  
+/* Hero End */
+
+/* General Styling For Both Course and Rules */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+  }
+  /* General End */
+
+  /* COURSES SECTION */
+.courses-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+  }
+  
+  .course-category {
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid #FFB22C;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-category h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .course-category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-category li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    position: relative;
+  }
+  
+  /* NOTE SECTION */
+  .course-note {
+    background: #fffbe6;
+    padding: 15px;
+    border-left: 5px solid #FFB22C;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-note p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d35400;
+  }
+  
+  .course-note ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .course-note li {
+    font-size: 1.1rem;
+    color: #555;
+  }  
+  /* Course End */
+
+  /* RULES & REGULATIONS SECTION */
+  .rules-section {
+    background-color: #F7F7F7;
+    padding: 60px 20px;
+  }
+  
+  .rule {
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid #2C3E50;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rule h3 {
+    font-size: 1.8rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+  }
+  
+  .rule p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+/* Rules End   */
+
+/* Responsive for both Rules and Course Section */
+@media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .course-category h3,
+    .rule h3 {
+      font-size: 1.5rem;
+    }
+  
+    .course-category li,
+    .rule p {
+      font-size: 1rem;
+    }
+  
+    .course-note {
+      font-size: 1rem;
+    }
+  
+    .course-note p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* REsponsive End */
