@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
   background: #F7F7F7;
   color: #222;
 }
@@ -53,7 +53,8 @@
   align-items: center;
   position: relative;
   padding: 30px;
-  gap: 50px; /* ⬅ Increase Space */
+  gap: 50px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Google Map */
@@ -61,6 +62,7 @@
   flex: 1;
   border-radius: 15px;
   overflow: hidden;
+  margin-bottom: 20px; /* Add space between map and contact info on smaller screens */
 }
 
 .map-container iframe {
@@ -128,4 +130,67 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
+}
+
+/* === Media Queries for Responsiveness === */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Hero Title */
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  /* Contact Info */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  /* Map */
+  .map-container iframe {
+    height: 250px;
+  }
+
+  /* Contact Info Cards */
+  .contact-info {
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 400px; /* Limiting card width */
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Divider for small screens */
+  .divider {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  /* Hero Title */
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  /* Contact Info Cards */
+  .contact-card {
+    font-size: 0.9rem;
+  }
+
+  .map-container iframe {
+    height: 200px;
+  }
 }

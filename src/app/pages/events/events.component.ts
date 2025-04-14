@@ -21,22 +21,24 @@ export class EventsComponent {
 
   events = [
     {
-      title: 'Annual Science Fair',
+      title: 'Providing Cycle',
       date: new Date('2025-02-24'),
-      description: 'Students showcase innovative projects and scientific discoveries.',
+      description: 'Providing Cycles for the welfare of the Students.',
       images: [
-        '/images/events/science1.jpg',
-        '/images/events/science2.jpg',
-        '/images/events/science3.jpg'
+        '/images/home/highlights/event1/cycle1.jpeg',
+        '/images/home/highlights/event1/cycle2.jpeg',
       ]
     },
     {
-      title: 'Inter-School Debate',
-      date: new Date('2025-03-10'),
-      description: 'A platform for students to enhance their public speaking skills.',
+      title: 'Pongal Celebration',
+      date: new Date('2025-01-10'),
+      description: 'Celebrating Pongal in school sows the seeds of tradition and gratitude in young hearts.',
       images: [
-        '/images/events/debate1.jpg',
-        '/images/events/debate2.jpg'
+        '/images/home/highlights/event4/pongal0.jpeg',
+        '/images/home/highlights/event4/pongal1.jpeg',
+        '/images/home/highlights/event4/pongal2.jpeg',
+        '/images/home/highlights/event4/pongal3.jpeg',
+        '/images/home/highlights/event4/pongal4.jpeg',
       ]
     },
     {
@@ -44,9 +46,20 @@ export class EventsComponent {
       date: new Date('2025-04-05'),
       description: 'An exciting day of athletics and team competitions.',
       images: [
-        '/images/events/sports1.jpg',
-        '/images/events/sports2.jpg',
-        '/images/events/sports3.jpg'
+        '/images/home/highlights/event2/sports1.jpeg',
+        '/images/home/highlights/event2/sports2.jpeg',
+        '/images/home/highlights/event2/sports3.jpeg',
+      ]
+    },
+    {
+      title: 'Earth Day',
+      date: new Date('2025-04-05'),
+      description: 'By planting trees with our students, we are sowing the seeds of knowledge, care, and responsibility for a greener, better tomorrow.',
+      images: [
+        '/images/home/highlights/event3/tree1.jpeg',
+        '/images/home/highlights/event3/tree2.jpeg',
+        '/images/home/highlights/event3/tree3.jpeg',
+        '/images/home/highlights/event3/tree4.jpeg',
       ]
     }
   ];

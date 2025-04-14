@@ -1,47 +1,143 @@
-<!-- Carousel Section -->
-<section id="feedback-carousel">
-    <div class="container">
-      <h2 class="section-title">What Our Alumni Say</h2>
-      
-      <div class="carousel">
-        <div class="carousel-inner">
-          <div class="feedback-card" *ngFor="let feedback of feedbacks">
-            <p class="feedback-text">"{{ feedback.comment }}"</p>
-            <h4 class="feedback-author">{{ feedback.name }}</h4>
-            <p class="feedback-meta">{{ feedback.occupation }} | Class of {{ feedback.year }}</p>
-          </div>
+<!-- 1. FEEDBACK CAROUSEL SECTION -->
+<section class="carousel-section">
+  <h2 class="section-title">What Our Alumni Say</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <!-- First copy -->
+      <div class="carousel-card" *ngFor="let fb of feedbacks">
+        <p class="comment">“{{ fb.comment }}”</p>
+        <div class="details">
+          <strong>{{ fb.name }}</strong> - {{ fb.occupation }} ({{ fb.year }})
         </div>
       </div>
       
-      <!-- Carousel Controls -->
-      <button class="prev-btn" (click)="prevSlide()">‹</button>
-      <button class="next-btn" (click)="nextSlide()">›</button>
-    </div>
-  </section>
-<!-- Carousel End   -->
-
-<!-- Form Section -->
-<section id="feedback-form">
-    <div class="container">
-      <div class="form-card">
-        <h2 class="form-title">Share Your Experience</h2>
-        
-        <form (submit)="submitFeedback()">
-          <label for="name">Name</label>
-          <input type="text" id="name" [(ngModel)]="newFeedback.name" required>
-          
-          <label for="year">Passed Out Year</label>
-          <input type="number" id="year" [(ngModel)]="newFeedback.year" required>
-          
-          <label for="occupation">Occupation</label>
-          <input type="text" id="occupation" [(ngModel)]="newFeedback.occupation" required>
-          
-          <label for="comment">Comments</label>
-          <textarea id="comment" [(ngModel)]="newFeedback.comment" required></textarea>
-          
-          <button type="submit">Submit</button>
-        </form>
+      <!-- Second copy -->
+      <div class="carousel-card" *ngFor="let fb of feedbacks">
+        <p class="comment">“{{ fb.comment }}”</p>
+        <div class="details">
+          <strong>{{ fb.name }}</strong> - {{ fb.occupation }} ({{ fb.year }})
+        </div>
       </div>
     </div>
-  </section>  
-<!-- Form End -->
+  </div>
+  
+</section>
+
+<!-- 2. FEEDBACK FORM SECTION -->
+<section class="form-section">
+  <h2 class="section-title">Leave Your Feedback</h2>
+  <div class="form-card">
+    <form (ngSubmit)="submitFeedback()">
+      <input type="text" placeholder="Your Name" [(ngModel)]="formData.name" name="name" required />
+      <input type="text" placeholder="Passed Out Year" [(ngModel)]="formData.year" name="year" required />
+      <input type="text" placeholder="Occupation" [(ngModel)]="formData.occupation" name="occupation" required />
+      <textarea placeholder="Your Comments" [(ngModel)]="formData.comment" name="comment" required></textarea>
+      <button type="submit">Submit</button>
+      <p class="thank-you" *ngIf="submitted">Thank you for your feedback!</p>
+    </form>
+  </div>
+</section>
+
+<!-- 3. STAFF LIST SECTION -->
+<!-- 👥 Staff List Section -->
+<section class="staff-list-section">
+  <h2 class="staff-title">Our Dedicated Staff</h2>
+
+  <div class="staff-grid">
+    <!-- Column 1 -->
+    <div class="staff-column">
+      <div class="staff-category">
+        <h3>Management</h3>
+        <ul>
+          <li>Most Rev. Dr. Stephan D.D.Ph.D. – Manager</li>
+          <li>Rev Fr. P.H. Antony Douglas – Correspondent</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Post Graduate Teachers</h3>
+        <ul>
+          <li>Mrs. M. Regina Mary M.Sc., M.Ed.</li>
+          <li>Mrs. X. Fatima Shanthi M.A., B.Ed.</li>
+          <li>Mr. G. Anto Vimal Rajesh M.Com., B.Ed., M.Phil.</li>
+          <li>Mr. P. Antony Ranjith Singh M.Com., M.P.Ed., (Dip. in Yoga)</li>
+          <li>Miss P. Michael Josephin M.A., B.Ed.</li>
+          <li>Mrs. P. Redemtta M.A., B.Ed., M.L.I.Sc</li>
+          <li>Mrs. A. Joyce Greatta M.Sc., B.Ed.</li>
+          <li>Mrs. T. Vasanthi M.Sc., B.Ed.</li>
+          <li>Mrs. K. Savitha M.A., B.Ed.</li>
+          <li>Mrs. M. Jeyachitra Renilda M.Sc.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="staff-column">
+      <div class="staff-category">
+        <h3>Headmistress & Asst. Headmasters</h3>
+        <ul>
+          <li>Mrs. I. Mary Freeda M.A., M.Ed. – Head Mistress</li>
+          <li>Mr. A. Christober M.Sc., B.Ed. – Asst. Headmaster</li>
+          <li>Mr. G. Antony Nickxon M.A., B.Ed. – Asst. Headmaster</li>
+          <li>Mr. L. Christu Arul Selvan M.A., B.Ed. – Asst. Headmaster</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Vocational Instructors</h3>
+        <ul>
+          <li>Mr. S. Murugan D.E.E.</li>
+          <li>Mr. M. Bevin M.A., M.Phil., D.E.E.</li>
+          <li>Mr. P. Antony Raju M.Sc., M.Ed., M.Phil.</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Tamil Pandits</h3>
+        <ul>
+          <li>Mr. M. Soosai Raj M.A., M.Ed., M.Phil.</li>
+          <li>Mrs. S. Chitra B.A., B.Ed.</li>
+          <li>Mrs. S. Jeya Pratha M.A., B.Ed.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="staff-column">
+      <div class="staff-category">
+        <h3>B.T. Assistants</h3>
+        <ul>
+          <li>Mr. A.S.J. Rogesh B.Sc., M.A., M.Ed.</li>
+          <li>Mr. D. Antony Rajan B.Sc., B.Ed.</li>
+          <li>Mr. J. Maria Arockia Godwin B.Sc., B.Ed., B.P.Ed.</li>
+          <li>Mr. N. Felix Johnson M.A., B.Ed.</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Others</h3>
+        <ul>
+          <li>Mrs. Anantha Seeli B.Sc., B.Ed.</li>
+          <li>Mrs. V. Stella Mary B.A., B.P.Ed. – P.E.T</li>
+          <li>Mr. G. Livingston Rajan M.A., M.Phil. – Secondary Graduate Teacher</li>
+          <li>Mr. S. Xavier Suresh M.A. – W.W.T.</li>
+          <li>Mr. S. Jadilan B.Sc., B.Ed. – D.T.</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Non-Teaching Staff</h3>
+        <ul>
+          <li>Mr. A. Suthagar – Head Clerk</li>
+          <li>Mr. C. George Milton B.Sc., M.A. – Librarian</li>
+          <li>Mr. K. Subbaiah – Lab Attender</li>
+          <li>Mr. [Name Missing] M.A., M.Com., B.Ed. – Water Man</li>
+          <li>Mr. P. Nerai Arul Selvan – Watch Man</li>
+          <li>Mr. A. Sornappo – Office Assistant</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+

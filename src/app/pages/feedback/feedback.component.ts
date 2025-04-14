@@ -7,40 +7,34 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './feedback.component.html',
-  styleUrl: './feedback.component.css'
+  styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent {
-
   feedbacks = [
-    { name: "John Doe", year: "2010", occupation: "Software Engineer", comment: "This school shaped my career!" },
-    { name: "Jane Smith", year: "2015", occupation: "Doctor", comment: "The discipline and education here were top-notch!" },
-    { name: "Michael Lee", year: "2018", occupation: "Entrepreneur", comment: "A great place to learn and grow!" }
+    { name: 'John Doe', year: '2022', occupation: 'Engineer', comment: 'Holy Redeemer shaped my future beautifully.' },
+    { name: 'Alice Smith', year: '2021', occupation: 'Doctor', comment: 'Forever grateful for the memories and learning.' },
+    { name: 'Michael Lee', year: '2023', occupation: 'Entrepreneur', comment: 'Amazing staff and opportunities!' },
   ];
 
-  currentIndex = 0;
+  staffs = [
+    { name: 'Mrs. Teresa', role: 'Principal', img: 'assets/staff1.jpg' },
+    { name: 'Mr. Daniel', role: 'Math Teacher', img: 'assets/staff2.jpg' },
+    { name: 'Ms. Clara', role: 'English Teacher', img: 'assets/staff3.jpg' },
+  ];
 
-  nextSlide() {
-    if (this.currentIndex < this.feedbacks.length - 1) {
-      this.currentIndex++;
-    } else {
-      this.currentIndex = 0;
-    }
-  }
+  formData = {
+    name: '',
+    year: '',
+    occupation: '',
+    comment: ''
+  };
 
-  prevSlide() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    } else {
-      this.currentIndex = this.feedbacks.length - 1;
-    }
-  }
-
-  newFeedback = { name: '', year: '', occupation: '', comment: '' };
+  submitted = false;
 
   submitFeedback() {
-    if (this.newFeedback.name && this.newFeedback.year && this.newFeedback.occupation && this.newFeedback.comment) {
-      this.feedbacks.push({ ...this.newFeedback });
-      this.newFeedback = { name: '', year: '', occupation: '', comment: '' };
-    }
+    this.feedbacks.push({ ...this.formData });
+    this.submitted = true;
+    this.formData = { name: '', year: '', occupation: '', comment: '' };
+    setTimeout(() => this.submitted = false, 3000);
   }
 }
