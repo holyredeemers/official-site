@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <h3>Add New Event</h3>
+  <form (ngSubmit)="submitEvent()">
+    <div class="mb-3">
+      <label>Title</label>
+      <input type="text" class="form-control" [(ngModel)]="title" name="title" required />
+    </div>
+    <div class="mb-3">
+      <label>Description</label>
+      <textarea class="form-control" [(ngModel)]="description" name="description" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label>Date</label>
+      <input type="date" class="form-control" [(ngModel)]="date" name="date" required />
+    </div>
+    <div class="mb-3">
+      <label>Upload up to 4 Images</label>
+      <input type="file" (change)="onFileChange($event)" multiple class="form-control" accept="image/*" />
+    </div>
+    <button class="btn btn-primary">Add Event</button>
+  </form>
+
+<h2 class="mt-5">Existing Events</h2>
+
+<div *ngFor="let event of events" style="margin-bottom: 20px; border: 1px solid #ccc; padding: 10px;">
+  <h3>{{ event.title }}</h3>
+  <p>{{ event.description }}</p>
+  <p><strong>Date:</strong> {{ event.date }}</p>
+
+  <button class="btn btn-danger" (click)="deleteEvent(event.id!)" style="margin-top: 10px;">Delete</button>
+</div>
+
+</div>

@@ -1,40 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FeedbackService, Feedback } from '../../service/feedback.service';
 
 @Component({
   selector: 'app-feedback',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './feedback.component.html',
-  styleUrls: ['./feedback.component.css']
+  styleUrls: ['./feedback.component.css'],
 })
-export class FeedbackComponent {
-  feedbacks = [
-    { name: 'John Doe', year: '2022', occupation: 'Engineer', comment: 'Holy Redeemer shaped my future beautifully.' },
-    { name: 'Alice Smith', year: '2021', occupation: 'Doctor', comment: 'Forever grateful for the memories and learning.' },
-    { name: 'Michael Lee', year: '2023', occupation: 'Entrepreneur', comment: 'Amazing staff and opportunities!' },
-  ];
-
-  staffs = [
-    { name: 'Mrs. Teresa', role: 'Principal', img: 'assets/staff1.jpg' },
-    { name: 'Mr. Daniel', role: 'Math Teacher', img: 'assets/staff2.jpg' },
-    { name: 'Ms. Clara', role: 'English Teacher', img: 'assets/staff3.jpg' },
-  ];
-
-  formData = {
+export class FeedbackComponent implements OnInit {
+  feedbacks: Feedback[] = [];
+  formData: Feedback = {
     name: '',
     year: '',
     occupation: '',
-    comment: ''
+    comment: '',
   };
-
   submitted = false;
 
+  constructor(private feedbackService: FeedbackService) {}
+
+  ngOnInit() {
+    // this.loadApprovedFeedback();
+
+    this.feedbackService.getApprovedFeedback().subscribe((data) => {
+      this.feedbacks = data;
+    });
+  }
+
+  // loadApprovedFeedback() {
+  //   this.feedbackService.getApprovedFeedback().subscribe((data) => {
+  //     this.feedbacks = data;
+  //   });
+  // }
+
   submitFeedback() {
-    this.feedbacks.push({ ...this.formData });
-    this.submitted = true;
-    this.formData = { name: '', year: '', occupation: '', comment: '' };
-    setTimeout(() => this.submitted = false, 3000);
+    this.feedbackService.submitFeedback(this.formData).subscribe(() => {
+      this.submitted = true;
+      this.formData = { name: '', year: '', occupation: '', comment: '' };
+      setTimeout(() => (this.submitted = false), 3000);
+    });
+  }
+
+  getInitials(name: string): string {
+    if (!name) return '';
+    const names = name.trim().split(' ');
+    return names.length === 1
+      ? names[0].charAt(0).toUpperCase()
+      : (names[0].charAt(0) + names[names.length - 1].charAt(0)).toUpperCase();
   }
 }

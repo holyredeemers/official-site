@@ -1,0 +1,45 @@
+<section class="pending-feedback">
+  <h2>Pending Feedbacks</h2>
+
+  <div *ngIf="feedbacks.length === 0" class="no-feedback">
+    No pending feedbacks available.
+  </div>
+
+  <div class="feedback-list">
+    <div *ngFor="let fb of feedbacks" class="feedback-card">
+      <div class="info-block">
+        <strong>{{ fb.name }}</strong>
+        <div class="details">{{ fb.occupation }} - {{ fb.year }}</div>
+        <p class="comment">“{{ fb.comment }}”</p>
+      </div>
+      <div class="action-buttons">
+        <button class="approve-btn" (click)="approveFeedback(fb.id!)">Approve</button>
+        <button class="delete-btn" *ngIf="fb.id !== undefined" (click)="deleteFeedback(fb.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- admin-feedback.component.html -->
+<section class="admin-feedback">
+  <h2>Manage Approved Feedback</h2>
+
+  <div *ngIf="approvedFeedbacks.length === 0" class="no-feedback">
+    No approved feedbacks available.
+  </div>
+
+  <div class="feedback-list">
+    <div class="feedback-card" *ngFor="let fb of approvedFeedbacks">
+      <div class="info-block">
+        <strong>{{ fb.name }}</strong>
+        <div class="details">{{ fb.occupation }} - {{ fb.year }}</div>
+        <p class="comment">“{{ fb.comment }}”</p>
+      </div>
+        <button class="delete-btn" (click)="deleteFeedback2(fb.id!)">Delete</button>
+
+
+    </div>
+  </div>
+</section>

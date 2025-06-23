@@ -1,17 +1,16 @@
 <!-- 1. FEEDBACK CAROUSEL SECTION -->
-<section class="carousel-section">
+<!-- <section class="carousel-section">
   <h2 class="section-title">What Our Alumni Say</h2>
   <div class="carousel">
     <div class="carousel-track">
-      <!-- First copy -->
+
       <div class="carousel-card" *ngFor="let fb of feedbacks">
         <p class="comment">“{{ fb.comment }}”</p>
         <div class="details">
           <strong>{{ fb.name }}</strong> - {{ fb.occupation }} ({{ fb.year }})
         </div>
       </div>
-      
-      <!-- Second copy -->
+    
       <div class="carousel-card" *ngFor="let fb of feedbacks">
         <p class="comment">“{{ fb.comment }}”</p>
         <div class="details">
@@ -21,6 +20,22 @@
     </div>
   </div>
   
+</section> -->
+
+<section class="feedback-section">
+  <h2 class="section-title">What Our Alumni Say</h2>
+  <div class="feedback-container">
+    <div class="feedback-card" *ngFor="let fb of feedbacks">
+      <div class="feedback-header">
+        <div class="avatar">{{ getInitials(fb.name) }}</div>
+        <div class="user-info">
+          <strong>{{ fb.name }}</strong>
+          <div class="sub-info">{{ fb.occupation }} - {{ fb.year }}</div>
+        </div>
+      </div>
+      <p class="comment">“{{ fb.comment }}”</p>
+    </div>
+  </div>
 </section>
 
 <!-- 2. FEEDBACK FORM SECTION -->
@@ -50,23 +65,23 @@
         <h3>Management</h3>
         <ul>
           <li>Most Rev. Dr. Stephan D.D.Ph.D. – Manager</li>
-          <li>Rev Fr. P.H. Antony Douglas – Correspondent</li>
+          <li>Rev Fr. P.H. Antony Douglas M.A.,M.Sc., – Correspondent</li>
         </ul>
       </div>
 
       <div class="staff-category">
         <h3>Post Graduate Teachers</h3>
         <ul>
-          <li>Mrs. M. Regina Mary M.Sc., M.Ed.</li>
           <li>Mrs. X. Fatima Shanthi M.A., B.Ed.</li>
           <li>Mr. G. Anto Vimal Rajesh M.Com., B.Ed., M.Phil.</li>
           <li>Mr. P. Antony Ranjith Singh M.Com., M.P.Ed., (Dip. in Yoga)</li>
-          <li>Miss P. Michael Josephin M.A., B.Ed.</li>
+          <li>Mrs. P. Michael Josephin M.A., B.Ed., M.Phil.</li>
           <li>Mrs. P. Redemtta M.A., B.Ed., M.L.I.Sc</li>
           <li>Mrs. A. Joyce Greatta M.Sc., B.Ed.</li>
-          <li>Mrs. T. Vasanthi M.Sc., B.Ed.</li>
+          <li>Mrs. T. Vasanthi M.Sc., B.Ed., M.Phil.</li>
           <li>Mrs. K. Savitha M.A., B.Ed.</li>
-          <li>Mrs. M. Jeyachitra Renilda M.Sc.</li>
+          <li>Mrs. M. Jeyachitra Renilda M.Sc., B.Ed., M.Phil.</li>
+          <li>Mrs. A. Sahaya Priya M.A., B.Ed., M.Phil.</li>
         </ul>
       </div>
     </div>
@@ -77,9 +92,8 @@
         <h3>Headmistress & Asst. Headmasters</h3>
         <ul>
           <li>Mrs. I. Mary Freeda M.A., M.Ed. – Head Mistress</li>
-          <li>Mr. A. Christober M.Sc., B.Ed. – Asst. Headmaster</li>
           <li>Mr. G. Antony Nickxon M.A., B.Ed. – Asst. Headmaster</li>
-          <li>Mr. L. Christu Arul Selvan M.A., B.Ed. – Asst. Headmaster</li>
+          <li>Mr. L. Christu Arul Selvan M.A., B.Ed., M.Phil,. – Asst. Headmaster</li>
         </ul>
       </div>
 
@@ -96,8 +110,8 @@
         <h3>Tamil Pandits</h3>
         <ul>
           <li>Mr. M. Soosai Raj M.A., M.Ed., M.Phil.</li>
-          <li>Mrs. S. Chitra B.A., B.Ed.</li>
-          <li>Mrs. S. Jeya Pratha M.A., B.Ed.</li>
+          <li>Mrs. S. Chitra M.A., B.Ed.</li>
+          <li>Mrs. S. Jeya Pratha M.A., B.Ed., M.Phil.</li>
         </ul>
       </div>
     </div>
@@ -109,29 +123,27 @@
         <ul>
           <li>Mr. A.S.J. Rogesh B.Sc., M.A., M.Ed.</li>
           <li>Mr. D. Antony Rajan B.Sc., B.Ed.</li>
-          <li>Mr. J. Maria Arockia Godwin B.Sc., B.Ed., B.P.Ed.</li>
+          <li>Mrs. Anantha Seeli B.Sc., B.Ed., M.A., M.Phil.</li>
           <li>Mr. N. Felix Johnson M.A., B.Ed.</li>
-        </ul>
-      </div>
-
-      <div class="staff-category">
-        <h3>Others</h3>
-        <ul>
-          <li>Mrs. Anantha Seeli B.Sc., B.Ed.</li>
-          <li>Mrs. V. Stella Mary B.A., B.P.Ed. – P.E.T</li>
+          <li>Mr. J. Maria Arockia Godwin B.Sc., B.Ed., B.P.Ed., M.Sc(Yoga).,</li>
+          <li>Mrs. A. Michael Rosita Arasi B.Sc., B.Ed.,</li>
+          <li>Mrs. J. Mary Sinthiya M.A., B.Ed.,</li>
+          <li>Mrs. V. Stella Mary B.A., B.P.Ed., P.G.D(Yoga)., – P.E.T</li>
           <li>Mr. G. Livingston Rajan M.A., M.Phil. – Secondary Graduate Teacher</li>
           <li>Mr. S. Xavier Suresh M.A. – W.W.T.</li>
           <li>Mr. S. Jadilan B.Sc., B.Ed. – D.T.</li>
+          <li>Mrs. A. Selva Latha  M.Sc., B.Ed.,</li>
+          <li>Mr.M.Jesu Prakash M.sc., B.Ed</li>
         </ul>
       </div>
 
       <div class="staff-category">
         <h3>Non-Teaching Staff</h3>
         <ul>
-          <li>Mr. A. Suthagar – Head Clerk</li>
+          <li>Mr. A. Suthagar B.B.A.,– Head Clerk</li>
           <li>Mr. C. George Milton B.Sc., M.A. – Librarian</li>
           <li>Mr. K. Subbaiah – Lab Attender</li>
-          <li>Mr. [Name Missing] M.A., M.Com., B.Ed. – Water Man</li>
+          <li>Mr. J. Arockiya Arputharaj – Water Man</li>
           <li>Mr. P. Nerai Arul Selvan – Watch Man</li>
           <li>Mr. A. Sornappo – Office Assistant</li>
         </ul>

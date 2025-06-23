@@ -70,6 +70,80 @@
 }
 
 
+.feedback-section {
+  background-color: #f9fafb;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feedback-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: scale(1.05);
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  background-color: #1e293b;
+  color: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.user-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.sub-info {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.comment {
+  font-style: italic;
+  font-size: 1rem;
+  text-align: left;
+}
+
+
+
 /* === 2. Feedback Form === */
 .form-section {
   padding: 3rem 1rem;

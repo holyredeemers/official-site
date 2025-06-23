@@ -86,6 +86,34 @@
     padding: 0 15px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
   }  
+
+  @media (max-width: 557px) {
+  .motto-section {
+    padding: 60px 15px;
+    min-height: auto;
+  }
+
+  .background-img {
+    height: 500px;
+  }
+
+  .motto-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .motto-section h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .motto-section p {
+    font-size: 0.8rem;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+}
+
 /* Moto End */
 
 /* Flag Section */

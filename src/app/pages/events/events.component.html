@@ -9,7 +9,8 @@
           <div class="event-carousel">
             <ngx-slick-carousel class="carousel" [config]="slideConfig">
               <div ngxSlickItem *ngFor="let img of event.images" class="carousel-item">
-                <img [src]="img" alt="Event Image" class="event-img">
+                <!-- <img [src]="img" alt="Event Image" class="event-img"> -->
+                <img [src]="'http://localhost:3000' + img" alt="event image" class="event-img" />
               </div>
             </ngx-slick-carousel>
           </div>

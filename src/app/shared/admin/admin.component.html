@@ -1,0 +1,37 @@
+<div class="admin-container">
+  <h2>Admin Dashboard</h2>
+
+  <div class="tab-header">
+    <button 
+      class="tab-btn" 
+      [class.active]="activeTab === 'scroll'" 
+      (click)="setTab('scroll')">
+      📰 Scroll
+    </button>
+    <!-- <button 
+      class="tab-btn" 
+      [class.active]="activeTab === 'eventSmall'" 
+      (click)="setTab('eventSmall')">
+      📆 Event Small
+    </button> -->
+    <button 
+      class="tab-btn" 
+      [class.active]="activeTab === 'event'" 
+      (click)="setTab('event')">
+      🎉 Event
+    </button>
+    <button 
+      class="tab-btn" 
+      [class.active]="activeTab === 'feedback'" 
+      (click)="setTab('feedback')">
+      💬 Feedback
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <div *ngIf="activeTab === 'scroll'"><app-scroll></app-scroll></div>
+    <!-- <div *ngIf="activeTab === 'eventSmall'">Event Small content here...</div> -->
+    <div *ngIf="activeTab === 'event'"><app-event-back></app-event-back></div>
+    <div *ngIf="activeTab === 'feedback'"><app-admin-feedback></app-admin-feedback></div>
+  </div>
+</div>

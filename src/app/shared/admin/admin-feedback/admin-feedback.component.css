@@ -1,0 +1,138 @@
+/* pending feedback */
+/* Style for Pending Feedback Section */
+.pending-feedback {
+  padding: 2rem;
+  background-color: #f1f5f9;
+}
+
+.pending-feedback h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #1e293b;
+}
+
+.pending-feedback .feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.pending-feedback .feedback-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: 0.2s ease;
+}
+
+.pending-feedback .feedback-card:hover {
+  background-color: #f9fafb;
+}
+
+.pending-feedback .info-block {
+  max-width: 80%;
+}
+
+.pending-feedback .details {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.pending-feedback .comment {
+  font-style: italic;
+}
+
+.pending-feedback .approve-btn,
+.pending-feedback .delete-btn {
+  margin-left: 0.5rem;
+}
+
+.pending-feedback .action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+
+/* admin-feedback.component.css */
+.admin-feedback {
+  padding: 2rem;
+  background-color: #f1f5f9;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #1e293b;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.feedback-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: 0.2s ease;
+}
+
+.feedback-card:hover {
+  background-color: #f9fafb;
+}
+
+.info-block {
+  max-width: 80%;
+}
+
+.details {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.approve-btn {
+  background-color: #1e56a0;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.no-feedback {
+  font-style: italic;
+  color: #64748b;
+}

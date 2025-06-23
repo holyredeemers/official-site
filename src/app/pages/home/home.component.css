@@ -4,6 +4,11 @@
     height: 500px;
     object-fit: cover;
   }
+
+  .carousel-caption {
+  display: block !important;
+}
+
   
   .carousel-caption {
     background-color: rgba(0, 0, 0, 0.5);
@@ -19,7 +24,35 @@
   .carousel-caption p {
     color: #F7F7F7;
     font-size: 1.2rem;
-  }  
+  }
+
+@media (max-width: 767px) {
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .carousel-caption {
+    display: block !important;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
 /* Hero End */
 
 /* Welcome Section */
@@ -64,6 +97,30 @@
     color: #F7F7F7; /* Light text on hover */
   }
   /* find-out-more-btn end */
+
+  @media (max-width: 767px) {
+  .welcome-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  #welcome-section .col-md-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .find-out-more-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
 /* Welcome End   */
   
 /* Highlights Section */

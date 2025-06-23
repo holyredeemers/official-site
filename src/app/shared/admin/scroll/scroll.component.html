@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <h3>Add Carousel Slide</h3>
+  <form (ngSubmit)="submitForm()" #carouselForm="ngForm">
+    <div class="mb-3">
+      <label>Title</label>
+      <input type="text" class="form-control" [(ngModel)]="title" name="title" required />
+    </div>
+
+    <div class="mb-3">
+      <label>Description</label>
+      <textarea class="form-control" [(ngModel)]="description" name="description" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label>Image</label>
+      <input type="file" (change)="onImageSelected($event)" class="form-control" accept="image/*" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!imageFile">Upload</button>
+  </form>
+
+  <div *ngIf="previewUrl" class="mt-3">
+    <img [src]="previewUrl" class="img-thumbnail" width="300" />
+  </div>
+
+  <hr />
+<h4 class="mt-4">Uploaded Carousel Items</h4>
+<ul class="list-group mt-3">
+  <li *ngFor="let item of carouselItems" class="list-group-item d-flex justify-content-between align-items-center">
+    <div>
+      <strong>{{ item.title }}</strong> - {{ item.description }}
+    </div>
+    <button class="btn btn-danger btn-sm" (click)="deleteItem(item.id)">Delete</button>
+  </li>
+</ul>
+</div>

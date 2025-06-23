@@ -59,7 +59,7 @@
 }
 
 /* Mobile menu (hidden by default) */
-@media (max-width: 768px) {
+@media (max-width: 1051px) {
   .hamburger {
     display: flex;
   }
