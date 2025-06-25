@@ -60,25 +60,24 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/four', async (req, res) => {
+router.get('/recent', async (req, res) => {
   try {
-    const limit = parseInt(req.query.limit) || null;
-    const query = limit
-      ? `SELECT * FROM tbl_events ORDER BY date DESC LIMIT $1`
-      : `SELECT * FROM tbl_events ORDER BY date DESC`;
-    const params = limit ? [limit] : [];
+    const result = await pool.query(
+      `SELECT * FROM tbl_events ORDER BY created_at DESC LIMIT 4`
+    );
 
-    const result = await pool.query(query, params);
     const events = result.rows.map(e => ({
       id: e.id,
       title: e.title,
       description: e.description,
       date: e.date,
-      images: [e.image1, e.image2, e.image3, e.image4].filter(img => img),
+      created_at: e.created_at,
+      images: [e.image1, e.image2, e.image3, e.image4].filter(img => img)
     }));
+
     res.json(events);
   } catch (err) {
-    console.error(err);
+    console.error('Error fetching recent events:', err);
     res.status(500).send('Server Error');
   }
 });

@@ -28,7 +28,8 @@ export class EventsService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
-  getTopEvents(limit = 4): Observable<EventItem[]> {
-    return this.http.get<EventItem[]>(`${this.apiUrl}?limit=${limit}`);
-  }
+getTopEvents(limit = 4): Observable<EventItem[]> {
+  return this.http.get<EventItem[]>(`${this.apiUrl}/recent`);
+}
+
 }
