@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { envi } from '../envi';
 
 export interface CarouselItem {
   id: number;
@@ -13,7 +14,7 @@ export interface CarouselItem {
   providedIn: 'root',
 })
 export class CarouselService {
-  private apiUrl = 'http://localhost:3000/api/carousel';
+  private apiUrl = `${envi.apiUrl}/carousel`;
 
   constructor(private http: HttpClient) {}
 

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { envi } from '../envi';
 
 export interface EventItem {
   id?: number;
@@ -12,7 +13,7 @@ export interface EventItem {
 
 @Injectable({ providedIn: 'root' })
 export class EventsService {
-  private apiUrl = 'http://localhost:3000/api/events';
+  private apiUrl = `${envi.apiUrl}/events`;
 
   constructor(private http: HttpClient) {}
 
